@@ -25,5 +25,7 @@ data <- data[ , 1:9]
 # subset dataset, reduce observations to Feb 1, 2007 and Feb 2, 2007 and exclude NAs
 data <- data[which(data$Time >= "2007-02-01 00:00:00" & data$Time < "2007-02-03 00:00:00"), ]
 
-# plot global active power
+# plot global active power data and create a PNG file
+png(file = "plot1.png", width = 480, height = 480)
 hist(data$Global_active_power, col = "red", main = "Global Active Power")
+dev.off()
