@@ -27,5 +27,5 @@ data <- data[which(data$Time >= "2007-02-01 00:00:00" & data$Time < "2007-02-03 
 
 # plot global active power data and create a PNG file
 png(file = "plot1.png", width = 480, height = 480)
-hist(data$Global_active_power, col = "red", main = "Global Active Power")
+hist(data$Global_active_power, ylab = "Frequency", xlab = "Global Active Power (kilowatts)", col = "red", main = "Global Active Power")
 dev.off()
